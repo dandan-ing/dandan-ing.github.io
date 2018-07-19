@@ -181,9 +181,9 @@
       
         <p>MVC =&gt; MOdel-View-Controller<br>MVVM =&gt; Model-View-ViewModel<br>Model即数据，<br>View视图，</p>
 <p>ViewModel连通Model和View，是视图显示逻辑、验证逻辑、网络请求等代码存放的地方。分离出非页面间关系部分和http请求部分，产品请求操作类，可以被view调用，或操作器调用。服务器请求过来的数据转化为数据源数据，进行简单数据处理。</p>
-<p>优点：<br>1.双向绑定技术；当Model变化时，View-Model会自动更新，View也会自动变化。数据一致性。<br>2.View的功能进一步强化，具有控制的部分功能，可以有自己的View-Model。<br>3.由于控制器功能移动到View上，减轻了控制器的负担。<br>4.可以对View或ViewController的数据处理部分抽象出来一个函数处理model。</p>
-<p>缺点：<br>1.数据绑定使bug难调试。<br>2.model长期持有数据，耗费更多内存。</p>
-
+        
+          <a class="article-more-a" href="/2018/07/19/浅谈MVVM/#more">more >></a>
+        
       
 
       
@@ -246,81 +246,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>兼容html，特殊符号 &lt; 和 &amp;的使用</p>
-<h1 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h1><h2 id="段落和换行"><a href="#段落和换行" class="headerlink" title="段落和换行"></a>段落和换行</h2><ol>
-<li>Markdown段落前端要使用一个以上的空行，普通段落不使用空格或制表符来缩进；</li>
-<li>Markdown允许段落内的强迫换行（插入换行符），可在插入出先按入两个以上的空格然后回车；</li>
-<li>使用换行来排版：email式的区块引用和多段落的列表</li>
-</ol>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>支持两种标题的语法，类Setext和类atx形式</p>
-<h3 id="1-类Setext形式"><a href="#1-类Setext形式" class="headerlink" title="1. 类Setext形式"></a>1. 类Setext形式</h3><p>用底线的形式，利用=和-(任何数量的=和-都有效)：</p>
-<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><h3 id="类Atx"><a href="#类Atx" class="headerlink" title="类Atx"></a>类Atx</h3><p>在行首插入1到6个#，对应到标题1到6，例如</p>
-<h1 id="是H1"><a href="#是H1" class="headerlink" title="是H1"></a>是H1</h1><h2 id="是H2"><a href="#是H2" class="headerlink" title="是H2"></a>是H2</h2><h6 id="是H6"><a href="#是H6" class="headerlink" title="是H6"></a>是H6</h6><p>还可以选择性的【闭合】类atx样式的标题，且行尾的#数量可以不用和开头一样。 </p>
-<h2 id="区块引用Blockquotes"><a href="#区块引用Blockquotes" class="headerlink" title="区块引用Blockquotes"></a>区块引用Blockquotes</h2><ol>
-<li><p>区块应用：在每行的最前面加&gt;:</p>
-<blockquote>
-<p>This is an example!<br>I ss</p>
-</blockquote>
-</li>
-<li><p>也可以在整个段落的第一行最前面加上&gt;</p>
-<blockquote>
-<p>This is an example! I ss,<br>sasa.</p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>sasasd.</p>
-<ol start="3">
-<li>可嵌套，只要根据层次加上不同数量的&gt;<br>This is an example!</li>
-</ol>
-<blockquote>
-<p>This is a good axample!</p>
-</blockquote>
-</blockquote>
-<ol start="4">
-<li>引用的区块内也可以使用其他的语法，包括标题、列表、代码区块等<blockquote>
-<h2 id="这是一个标题"><a href="#这是一个标题" class="headerlink" title="这是一个标题"></a>这是一个标题</h2><ol>
-<li>这是第一行列表项</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>支持有序列表和无序列表<br>无序列表使用星号、加号或是减号作为列表标记：</p>
-<ul>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ul>
-<ul>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ul>
-<ul>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ul>
-<p>有序列表则使用数字接着一个英文句点：</p>
-<ol>
-<li>One</li>
-<li>Two</li>
-<li>Three</li>
-</ol>
-<p>Tip： 在列表上的数字不会影响实际输出结果。</p>
-<p>列表项目可包含多个段落，每个项目下的段落都必须缩进4个空格或是1个制表符：</p>
-<h2 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h2><p>用<pre>和<code>标签把代码区块包起来。<br>新建代码区块： 缩进4个空格或是1个制表符。</code></pre></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>三个以上的星号、减号、底线来建立一个分割线，行内不能有其他内容。</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<h1 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h1><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>行内式和参考式两种形式。链接文字都用[方括号] 来标记。例如：<br>行内式：This is <a href="http://example.com/" target="_blank" rel="noopener">an example</a> inline link.<br>参考式：This is [an example][id] reference-style link.<br>        [id]: <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>使用星号（*）和底线（_）</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>使用反引号包起来 </p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>一个惊叹号，接着一个方括号，里面放上图片的替代文字；接着放一个普通括号，里面放上图片的地址，最后还可以用引号包住并加上选择性的’title’文字。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><h2 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h2><p>学习内容来自：<a href="https://www.appinn.com/markdown/index.html" target="_blank" rel="noopener">https://www.appinn.com/markdown/index.html</a></p>
-
+        
+          <a class="article-more-a" href="/2018/07/19/Markdown语法/#more">more >></a>
+        
       
 
       
@@ -382,64 +310,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#W3C<br>    1.Web设计和应用</p>
-<pre><code>    包括构造和渲染Web页面所需的各类技术标准，HTML、CSS、Ajax及其他应用于构造Web应用（webApps）的技术；也包括让页面信息服务于伤残人士、多语言环境下的国际化，及让Web页面再移动设备上更好、更容易获取的相关技术。
-
-2.Web体系架构
-
-    主要关注Web的基础技术和原则，包括URIs及HTTP协议等。
-
-3.语义Web
-
-    通过一组技术支撑“数据的Web”，将Web看作一个存储和管理数据的大型分布式数据库。语义Web是构造这样的数据Web的重要一环，帮助人们创建数据并存储在Web上，创建相关的词汇表及数据的处理规则。具体技术包括RDF、SPARQL、OWL及SKOS等。
-
-4.可扩展标记语言（XML）
-
-    是一种具有结构性标记的标记语言，可以用来标记数据、定义数据结构，是一种允许用户对自己的标记语言进行定义的语言。XMl相关技术包括XMl，XML名字空间，XML大纲
-    XSLT、高效XML数据交换及其他相关标准规范。
-
-5.服务的Web
-
-    Web上及许多企业软件中，存在大量网络可访问的、基于消息的软件和服务。构造服务的Web需要一系列Web服务的技术和标准，包括HTTP、XML、SOAP、WADL、SPARQL等。
-
-6.面向各种访问设备的Web
-
-    W3C致力于让Web用户在任何时间、任何地点、通过任何设备都可以获取Web内容和服务，这些访问Web的设备包括通过智能手机及其他移动终端，也包括任何适用Web技术的消费电子、打印机、交互式电视、甚至各类集成到其他产品中的终端。
-
-7.浏览器和开发工具
-
-    Web的价值和成长依赖于其全球性和普适性。确保各种终端都能获取同样的Web内容和体验。
-</code></pre><h1 id="标准内容："><a href="#标准内容：" class="headerlink" title="标准内容："></a>标准内容：</h1><pre><code>抛弃声明：&lt;font&gt;标签  &lt;font color=&quot;red&quot;&gt;&lt;/font&gt;替换方法：&lt;span class=&quot;red_tex&quot;&gt;&lt;/span&gt;;
-1.doctype
-    标识用的XHTML或HTML版本，DTD包含文档的规则（Transitional，Strict，Frameset）。
-2.namespace
-    &lt;html xmlns=&quot;http://www/w3.org/1999/xhtml&quot; lang=&quot;gb23212&quot;&gt;其中xmlns为名字空间。
-3.定义语言编码
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=gb2312&quot;&gt;
-4.JavaScript定义
-    用&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;来开头定义，并且需要加注释&lt;!-- --&gt;以保证不再不支持js的浏览器上直接显示出代码。
-5.CSS定义
-    用&lt;style type=&quot;text/css&quot;&gt;开头来定义，也不建议直接写在内容代码里如&lt;div style=&quot;padding-left:20px;&quot;&gt;&lt;/div&gt;，并需要加个注释符&lt;!-- --&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        &lt;!--
-        div{
-            margin:0xp;
-        }
-        --&gt;
-    &lt;/style&gt;
-6.不要在注释内容中使用“--”
-    &quot;--&quot;只能发生在XHTML注释的开头和结束
-7.所有标签的元素和属性的名字都必须使用小写
-    XHTML对大小写敏感，HTML不敏感。XHTML要求所有标签和属性的名字都必须使用小写。
-8.所有属性必须用引号&quot;&quot;括起来
-    在HTML中可以不用给属性值加引号，但在XHTML中，必须要加。
-9.把所有&lt;和&amp;特殊符号用编码表示
-10.给所有属性赋一个值
-11.所有的标记都必须都要有一个相应的结束标记
-12.所有的标记都必须合理嵌套
-13.图片添加有意义的alt属性
-14.在form表单中增加label，以增加用户友好度
+        <h1 id="W3C"><a href="#W3C" class="headerlink" title="W3C"></a>W3C</h1><p>1.Web设计和应用</p>
+<pre><code>包括构造和渲染Web页面所需的各类技术标准，HTML、CSS、Ajax及其他应用于构造Web应用（webApps）的技术；也包括让页面信息服务于伤残人士、多语言环境下的国际化，及让Web页面再移动设备上更好、更容易获取的相关技术。
+</code></pre><p>2.Web体系架构</p>
+<pre><code>主要关注Web的基础技术和原则，包括URIs及HTTP协议等。
 </code></pre>
+        
+          <a class="article-more-a" href="/2018/07/19/W3C标准理解/#more">more >></a>
+        
       
 
       
