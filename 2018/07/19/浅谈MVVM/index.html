@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSS世界学习笔记 | 每天努力一点点--生活更美好</title>
+  <title>浅谈MVVM | 每天努力一点点--生活更美好</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习过程，增强记忆">
+  <meta name="description" content="MVC =&amp;gt; MOdel-View-ControllerMVVM =&amp;gt; Model-View-ViewModelModel即数据，View视图， ViewModel连通Model和View，是视图显示逻辑、验证逻辑、网络请求等代码存放的地方。分离出非页面间关系部分和http请求部分，产品请求操作类，可以被view调用，或操作器调用。服务器请求过来的数据转化为数据源数据，进行简单数据处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS世界学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/07/17/CSS世界学习笔记/index.html">
+<meta property="og:title" content="浅谈MVVM">
+<meta property="og:url" content="http://yoursite.com/2018/07/19/浅谈MVVM/index.html">
 <meta property="og:site_name" content="每天努力一点点--生活更美好">
-<meta property="og:description" content="记录学习过程，增强记忆">
+<meta property="og:description" content="MVC =&amp;gt; MOdel-View-ControllerMVVM =&amp;gt; Model-View-ViewModelModel即数据，View视图， ViewModel连通Model和View，是视图显示逻辑、验证逻辑、网络请求等代码存放的地方。分离出非页面间关系部分和http请求部分，产品请求操作类，可以被view调用，或操作器调用。服务器请求过来的数据转化为数据源数据，进行简单数据处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T10:54:08.268Z">
+<meta property="og:updated_time" content="2018-07-19T09:08:09.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS世界学习笔记">
-<meta name="twitter:description" content="记录学习过程，增强记忆">
+<meta name="twitter:title" content="浅谈MVVM">
+<meta name="twitter:description" content="MVC =&amp;gt; MOdel-View-ControllerMVVM =&amp;gt; Model-View-ViewModelModel即数据，View视图， ViewModel连通Model和View，是视图显示逻辑、验证逻辑、网络请求等代码存放的地方。分离出非页面间关系部分和http请求部分，产品请求操作类，可以被view调用，或操作器调用。服务器请求过来的数据转化为数据源数据，进行简单数据处理">
   
     <link rel="alternative" href="/atom.xml" title="每天努力一点点--生活更美好" type="application/atom+xml">
   
@@ -158,27 +158,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS世界学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-浅谈MVVM" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS世界学习笔记
+      浅谈MVVM
     </h1>
   
 
         
-        <a href="/2018/07/17/CSS世界学习笔记/" class="archive-article-date">
-  	<time datetime="2018-07-17T10:32:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
+        <a href="/2018/07/19/浅谈MVVM/" class="archive-article-date">
+  	<time datetime="2018-07-19T05:39:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>MVC =&gt; MOdel-View-Controller<br>MVVM =&gt; Model-View-ViewModel<br>Model即数据，<br>View视图，</p>
+<p>ViewModel连通Model和View，是视图显示逻辑、验证逻辑、网络请求等代码存放的地方。分离出非页面间关系部分和http请求部分，产品请求操作类，可以被view调用，或操作器调用。服务器请求过来的数据转化为数据源数据，进行简单数据处理。</p>
+<p>优点：<br>1.双向绑定技术；当Model变化时，View-Model会自动更新，View也会自动变化。数据一致性。<br>2.View的功能进一步强化，具有控制的部分功能，可以有自己的View-Model。<br>3.由于控制器功能移动到View上，减轻了控制器的负担。<br>4.可以对View或ViewController的数据处理部分抽象出来一个函数处理model。</p>
+<p>缺点：<br>1.数据绑定使bug难调试。<br>2.model长期持有数据，耗费更多内存。</p>
+
       
 
       
@@ -208,17 +212,6 @@
       
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/默认分类//" class="article-tag-list-link color5">默认分类</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -268,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/17/CSS世界学习笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/19/浅谈MVVM/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,15 +275,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/19/W3C标准理解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          W3C标准理解
-        
-      </div>
-    </a>
   
+    <a href="/2018/07/19/Markdown语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Markdown语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
